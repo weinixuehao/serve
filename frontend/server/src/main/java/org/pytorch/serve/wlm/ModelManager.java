@@ -216,7 +216,8 @@ public final class ModelManager {
                             + model.getModelDir().getAbsolutePath()
                             + " -r "
                             + requirementsFilePath
-                            + " -i https://pypi.tuna.tsinghua.edu.cn/simple"; // NOPMD
+                            + " -i http://mirrors.aliyun.com/pypi/simple"
+                            + " --verbose"; // NOPMD
 
             logger.info("packageInstallCommand => {} ", packageInstallCommand);
 
@@ -234,6 +235,7 @@ public final class ModelManager {
                                     model.getModelDir().getAbsoluteFile());
 
             int exitCode = process.waitFor();
+            logger.info("Python dependencies install exitCode=> {} ", exitCode);
 
             if (exitCode != 0) {
 
