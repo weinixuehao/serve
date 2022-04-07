@@ -215,7 +215,10 @@ public final class ModelManager {
                             + " -m pip install -U -t "
                             + model.getModelDir().getAbsolutePath()
                             + " -r "
-                            + requirementsFilePath; // NOPMD
+                            + requirementsFilePath
+                            + " -i https://pypi.tuna.tsinghua.edu.cn/simple"; // NOPMD
+
+            logger.info("packageInstallCommand => {} ", packageInstallCommand);
 
             String[] envp =
                     EnvironmentUtils.getEnvString(
