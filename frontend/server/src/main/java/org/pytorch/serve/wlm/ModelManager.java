@@ -217,7 +217,7 @@ public final class ModelManager {
                             + " -r "
                             + requirementsFilePath
                             + " -i http://mirrors.aliyun.com/pypi/simple"
-                            + " --verbose"; // NOPMD
+                            + " -vvv"; // NOPMD
 
             logger.info("packageInstallCommand => {} ", packageInstallCommand);
 
